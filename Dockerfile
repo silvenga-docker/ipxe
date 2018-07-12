@@ -16,7 +16,9 @@ RUN set -xe \
 
 RUN set -xe \
     && mkdir -p /workspace/ \
-    && git clone git://git.ipxe.org/ipxe.git /workspace/ipxe
+    && git clone https://github.com/ipxe/ipxe.git /workspace/ipxe \
+    && cd /workspace/ipxe \
+    && git checkout 05b979146ddb0b957354663a99c181357ad310b2
 
 COPY ./src /workspace/
 

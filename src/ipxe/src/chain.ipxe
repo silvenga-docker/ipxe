@@ -1,0 +1,11 @@
+#!ipxe
+
+dhcp || goto error
+
+:restart
+chain http://pxe.silvenga.com/bootstrap.ipxe || goto error
+
+:error
+echo An error occurred, dropping to shell.
+echo Goto restart to resume ipxe boot.
+shell || goto error

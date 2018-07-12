@@ -24,13 +24,7 @@ COPY ./src /workspace/
 
 RUN set -xe \
     && cd /workspace/ipxe/src \
-    && make
-
-RUN set -xe \
-    && cd /workspace/ipxe/src \
-    && make bin/undionly.kpxe EMBED=chain.ipxe \
-    && make bin-x86_64-efi/ipxe.efi EMBED=chain.ipxe \
-    && make bin/ipxe.iso EMBED=chain.ipxe
+    && make bin/undionly.kpxe bin-x86_64-efi/ipxe.efi bin/ipxe.iso bin/ipxe.lkrn bin/ipxe.pxe bin/ipxe.usb EMBED=chain.ipxe
 
 FROM busybox
 

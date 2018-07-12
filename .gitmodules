@@ -1,0 +1,3 @@
+[submodule "vendor/ipxe"]
+	path = vendor/ipxe
+	url = git://git.ipxe.org/ipxe.git

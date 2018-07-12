@@ -35,4 +35,6 @@ COPY --from=ipxe-builder \
     /workspace/ipxe/src/bin/ipxe.usb \
     /workspace/ipxe/src/bin/undionly.kpxe \
     /workspace/ipxe/src/bin-x86_64-efi/ipxe.efi \
-    ./data/
+    /data/
+
+VOLUME /data

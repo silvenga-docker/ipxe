@@ -1,4 +1,3 @@
-
 @Library('jenkins-library') _
 
 buildImage {
